@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "minimal": "find . -maxdepth 1 ! -name 'package.json' ! -name 'package-lock.json' ! -name '.next' ! -name '.' -exec rm -rf {} + && npm install --only=production",
+    "minimal": "find . -maxdepth 1 ! -name 'package.json' ! -name 'package-lock.json' ! -path './.next' ! -name '.' -exec rm -rf {} + && npm ci --omit=dev",
     "start": "next start -p $PORT",
     "lint": "next lint"
   },
