@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "minimal": "find . -maxdepth 1 ! -name 'package.json' ! -name 'package-lock.json' ! -name '.next' ! -name '.' -exec rm -rf {} + && npm install --only=production",
+    "start": "next start -p $PORT",
     "lint": "next lint"
   },
   "dependencies": {
